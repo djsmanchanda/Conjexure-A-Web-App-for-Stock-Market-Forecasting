@@ -19,9 +19,9 @@ st.header("Welcome to Conjexure!")
 st.markdown(
     "In this Machine Learning application, we have used the historical stock price data for Alphabet (GOOG) and Apple Inc. (AAPL) to forecast their price in a specified future window.")
 st.markdown(
-    "We have used the Tensorflow and Keras APIs to build a stacked LSTM model with a convolutional as well as a lambda layer. We trained our model on a roughly 2 period from July 1st, 2021 through July 1st, 2023.")
+    "We have used the Tensorflow and Keras APIs to build a stacked LSTM model with a convolutional as well as a lambda layer. We trained our model on a roughly 2 year period from July 1st, 2021 through July 1st, 2023.")
 
-path_googl = ('data_googl.csv')
+path_goog = ('data_goog.csv')
 path_aapl = ('data_aapl.csv')
 
 
@@ -178,7 +178,7 @@ if __name__ == "__main__":
         "You may go over the raw data for Alphabet or Apple. Just go to the sidebar and select your stock of choice. We have used the closing price as the generic price. ")
     choice = st.selectbox("Show Raw Data", ['Alphabet (GOOG)', 'Apple (APPL)'])
     if choice == 'Alphabet (GOOG)':
-        data = load_data(path_googl, 4000)
+        data = load_data(path_goog, 4000)
         st.write(data)
     elif choice == 'Apple (APPL)':
         data = load_data(path_aapl, 4000)
